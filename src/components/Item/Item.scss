@@ -1,0 +1,58 @@
+.new_price{
+    font-weight: 500;
+}
+.old_price{
+    font-weight: 300;
+    text-decoration: line-through;
+}
+.cart_box{
+    display: flex;
+    gap: 20px;
+    .carticon{
+        
+        color: #fff;
+        padding: 5px;
+        border-radius: 50%;
+        background-color: #ff4141;
+    }
+    span{
+        font-weight: 700;
+    }
+    span:hover{
+        transform:  scale(1.05);
+        transition: 0s;
+    }
+}
+@media (max-width: 928px){
+    .cart_box{
+        span{
+            font-size: 12px;
+        }
+    }
+    .card p{
+        font-size: 12px;
+    }
+    
+}
+@media(max-width: 818px){
+    .cart_box{
+        span{
+            font-size: 11px;
+        }
+    }
+    .card p{
+        font-size: 12px;
+    }
+}
+@media(max-width:740px){
+    .cart_box{
+        display: flex;
+        gap: 5px;
+        span{
+            font-size:9px;
+        }
+    }
+    .card p{
+        font-size: 10px;
+    }
+}

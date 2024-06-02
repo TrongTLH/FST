@@ -1,0 +1,225 @@
+
+.boxcarousel{
+    padding: 0 20px;
+}
+.home{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+     .home_top{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         font-size: 40px;
+         font-weight: 370;
+         .thoudsand{
+            color: #ffdf40;
+         }
+     }
+     .subcarousel{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:  87%;
+        height: 300px;
+     }
+     .home_search{
+        border-radius: 70px;
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-left: 30px;
+        input{   
+            height: 68px;
+            font-size: 17px;      
+            flex-grow: 1;
+            border: none;
+            outline: none;
+        }
+         span{        
+            font-size: 20px;
+            padding-right: 20px;     
+            height: 70px;
+         }
+     }
+     .product_home{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 120px;
+        p{
+            font-weight: 500;
+            color: #ffdf40;
+            font-size: 25px;
+        }
+        h1{
+            font-size: 40px;
+            font-family: 700;
+        }
+     }
+     .carousel_product{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+     }
+     .product_list{
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         gap: 30px;
+     }
+     .slogan p{
+         color: #555;
+        font-size: 20px;
+     }
+     .home_search:hover{
+        transform:  scale(1.05);
+        transition: 1.6s;
+     }
+}
+@media(max-width: 985px){
+    .home{
+        .subcarousel{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:  100%;
+            height: 300px;
+         }
+    }
+}
+
+@media(max-width: 928px){
+    .home_top{
+        p{
+            font-size: 25px;
+        }
+        span{
+            font-size: 25px;
+        }
+    }
+    .home{
+        .home_search{
+            width: 600px;
+          
+        }
+        .product_home h1{
+            font-size: 20px;
+        }
+        .product_home p{
+            font-size: 19px;
+        }
+       
+    }
+    .product_list{
+        .carousel_product{
+            width: 700px;
+        }
+    }
+}
+@media(max-width:846px){
+   
+    .home_top{
+        p{
+            font-size: 35px;
+        }
+        span{
+            font-size: 35px;
+        }
+    }
+    .home{
+        .home_search{
+            width: 700px;
+          
+        }
+        .product_home h1{
+            font-size: 29px;
+        }
+        .product_home p{
+            font-size: 22px;
+        }
+       
+    }
+    .product_list{
+        .carousel_product{
+            width: 800px;
+        }
+    }
+
+}
+@media(max-width: 818px){
+    .home_top{
+        p{
+            font-size: 30px;
+        }
+        span{
+            font-size: 30px;
+        }
+    }
+    .home{
+        .home_search{
+            width: 600px;
+          
+        }
+        .product_home h1{
+            font-size: 25px;
+        }
+        .product_home p{
+            font-size: 20px;
+        }
+       
+    }
+    .product_list{
+        .carousel_product{
+            width: 650px;
+        }
+    }
+
+}
+@media(max-width: 740px){
+    .home_top{
+        p{
+            font-size: 20px;
+        }
+        span{
+            font-size: 20px;
+        }
+    }
+    .home{
+        .home_search{
+            width: 550px;
+          
+        }
+        .product_home h1{
+            font-size: 20px;
+        }
+        .product_home p{
+            font-size: 15px;
+        }
+        button{
+            width: 100px;
+            height: 20px;
+            .btnm{
+                font-size: 12px;
+            }
+        }
+    }
+    .product_list{
+        .carousel_product{
+            width: 600px;
+        }
+    }
+}
+@media(max-width: 1195px){
+   
+}
