@@ -32,31 +32,31 @@ export default function SubCarousel({ numberOfSlice }) {
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-bot-abbott-grow-3-g-powervani-900g.jpg"
+            src="https://britishbabyshop.com/cdn/shop/files/Kendamil-Goat-stage1-First-Infant-milk-formula-620x620_360x.png?v=1692384009"
             alt="img"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://media.bibomart.net/images/2024/2/2/2/origin/sua-bot-abbott-grow-3-g-powervani-900g.jpg"
+            src="https://britishbabyshop.com/cdn/shop/products/Kendamil-berry-porridge-600x600_360x.png?v=1664919947"
             alt="img"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-meiji-so-9.jpg"
+            src="https://britishbabyshop.com/cdn/shop/files/Kendamil-Classic-Stage3-Toddler-milk-615x_360x.png?v=1688538232"
             alt="img"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://media.bibomart.net/images/2024/2/2/3/origin/sua-bot-abbott-grow-3-g-powervani-900g.jpg"
+            src="https://britishbabyshop.com/cdn/shop/products/Kendamil-creamy-porridge-600x600_360x.png?v=1664920203"
             alt="img"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-bot-aptamil-advanced-anh-so-3-800g.jpg"
+            src="https://britishbabyshop.com/cdn/shop/products/Kendamil-cauliflower-broccoli-tomato-bake-600x600_360x.png?v=1664920050"
             alt="img"
           ></img>
         </SwiperSlide>

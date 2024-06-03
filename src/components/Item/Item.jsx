@@ -15,7 +15,7 @@ const Item = () => {
         cover={
           <img
             alt="img"
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-meiji-so-9.jpg"
+            src="https://britishbabyshop.com/cdn/shop/files/HippOrganic1.jpg?v=1656210873"
           />
         }
       >
@@ -43,7 +43,7 @@ const Item = () => {
         cover={
           <img
             alt="img"
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-meiji-so-0-noi-dia-nhat-800g.jpg"
+            src="https://britishbabyshop.com/cdn/shop/files/Holle-Goat-stage1-First-Infant-milk-formula-570x.png?v=1692699911"
           />
         }
       >
@@ -71,7 +71,7 @@ const Item = () => {
         cover={
           <img
             alt="img"
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-xo-kid-vani-800g.jpg"
+            src="https://britishbabyshop.com/cdn/shop/files/Kendamil-Goat-stage1-First-Infant-milk-600x-wh.png?v=1706134474"
           />
         }
       >
@@ -99,7 +99,7 @@ const Item = () => {
         cover={
           <img
             alt="img"
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-meiji-growing-up-formula-800g-12-36m.jpg"
+            src="https://britishbabyshop.com/cdn/shop/products/Aptamil-Organic-Stage-2-Follow-On-Milk-Formula-800g_360x.png?v=1668336619"
           />
         }
       >

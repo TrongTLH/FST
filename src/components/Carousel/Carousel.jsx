@@ -42,6 +42,13 @@ export default function Carousel() {
             alt="img"
           ></img>
         </SwiperSlide>
+
+        <SwiperSlide>
+          <img
+            src="https://britishbabyshop.com/cdn/shop/files/mother_and_baby_background_2000x.jpg?v=1660757367"
+            alt="img"
+          ></img>
+        </SwiperSlide>
         
       </Swiper>
     </>

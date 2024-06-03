@@ -1,4 +1,18 @@
 .productitem{
+    width: 100%;
+    .container{
+        .container_text{
+            margin-top: 160px;
+            h1{
+                font-size: 40px;
+                font-weight: 350;
+            }
+            p{
+                font-size: 18px;
+                color: #121212bf;
+            }
+        }
+    }
     .productitem1{
         margin-top: 20px;
         display: flex;

@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header_logo">
         <Link to={"/"}>
           <img
-            src="https://www.beeamazed.com.sg/wp-content/uploads/2021/03/HM_LOGO-1024x559.png"
+            src="https://logos-world.net/wp-content/uploads/2023/03/Cadburys-Dairy-Milk-Chocolat-Logo-1961.png"
             width={200}
             alt="logo"
           ></img>
@@ -18,6 +18,9 @@ const Header = () => {
       <nav className="header_nav">
         <li>
           <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/shop"}>Shop</Link>
         </li>
         <li>
           <Link to={"/infor"}>Information</Link>

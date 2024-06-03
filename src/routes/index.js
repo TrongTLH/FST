@@ -4,7 +4,6 @@ import OrderPage from "../pages/OrderPage/OrderPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import ProductDetail from "../pages/ProductDetail/ProductDetail";
 import SubCarousel from "../components/SubCarousel/SubCarousel";
-
 export const routes = [
   {
     path: "/",
