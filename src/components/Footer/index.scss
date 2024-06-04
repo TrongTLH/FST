@@ -11,16 +11,28 @@
     .footer_left{
         h1{
           
+            font-size: 14px;
             font-weight: 700;
         }
         
     }
-    .footer-right p{
-        font-size: 13px;
+    .footer-right{
+        p{
+            font-size: 13px;
+        }
+       
+        h1{
+            font-size: 14px;
+            font-weight: 700;
+        }
     }
     .footer-right-right{
         display: flex;
         flex-direction: column;
+        h1{
+            font-size: 14px;
+            font-weight: 700;
+        }
         gap: 10px;
        
         .box{
