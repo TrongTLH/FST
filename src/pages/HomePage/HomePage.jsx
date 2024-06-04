@@ -120,7 +120,7 @@ const HomePage = () => {
              
               </Col>
               <Col span={22}>
-              <h1>Customer Feedback</h1>
+              <h1 style={{padding: '20px 0'}}>Customer Feedback</h1>
               </Col>
            </Row>
           <Row>

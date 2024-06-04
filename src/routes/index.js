@@ -4,8 +4,8 @@ import OrderPage from "../pages/OrderPage/OrderPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import ProductDetail from "../pages/ProductDetail/ProductDetail";
 import SubCarousel from "../components/SubCarousel/SubCarousel";
-import SignIn from "../pages/SignInPage/SignIn";
-import SignUp from "../pages/SignInPage/SignUp";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import SignUpPage from "../pages/SignupPage/SignupPape";
 export const routes = [
   {
     path: "/",
@@ -17,16 +17,7 @@ export const routes = [
     page: OrderPage,
     isShowHeader: true,
   },
-  {
-    path: "/signin",
-    page: SignIn,
-    isShowHeader: false,
-  },
-  {
-    path: "/signup",
-    page: SignUp,
-    isShowHeader: false,
-  },
+
   {
     path: "/shop",
     page: ProductPage,
@@ -50,4 +41,13 @@ export const routes = [
     path: "*",
     page: NotFoundPage,
   },
+  {
+    path: "/login",
+    page: LoginPage,
+  },
+  {
+    path: "/signup",
+    page: SignUpPage,
+  },
+
 ];

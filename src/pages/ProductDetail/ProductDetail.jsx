@@ -56,7 +56,6 @@ const ProductDetail = () => {
         </div>
       </Col>
       <Col span={12} className="productdetail-right">
-       
         <h1>Sữa Meiji số 9 nội địa Nhật 800g (1 - 3 tuổi)</h1>
         <p2>MSP: 100023</p2>
         <p3>
@@ -66,10 +65,22 @@ const ProductDetail = () => {
           ăn dạng rắn.
         </p3>
         <div className="price">
-            <img src="https://bibomart.com.vn/images/product_detail/fire.png" alt="logo" width={24} height={25}></img>
+          <img
+            src="https://bibomart.com.vn/images/product_detail/fire.png"
+            alt="logo"
+            width={24}
+            height={25}
+          ></img>
           <p>365.000đ</p>
           <span className="old_price">700.000đ</span>
-          <div style={{color: '#fff', background: '#ff4141', padding: '4px 10px', borderRadius: '10px'}}>
+          <div
+            style={{
+              color: "#fff",
+              background: "#ff4141",
+              padding: "4px 10px",
+              borderRadius: "10px",
+            }}
+          >
             <span>8%</span>
           </div>
         </div>

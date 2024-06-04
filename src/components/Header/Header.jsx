@@ -27,11 +27,11 @@ const Header = () => {
         </li>
         <div className="createaccount">
           <li>
-            <Link to={"/createaccount"}>Create Account</Link>
+            <Link to={"/signup"}>Create Account</Link>
           </li>
         </div>
         <li>
-          <Link to={"/signin"}>Sign in</Link>
+          <Link to={"/login"}>Sign in</Link>
         </li>
 
         <li style={{ fontSize: "16px", display: "flex", gap: "5px" }}>
