@@ -9,7 +9,7 @@
     left: 0;
     z-index: 10;
     backdrop-filter: blur(3.6px);
-   
+    
     &_nav{
         display: flex;
         align-items: center;
@@ -31,6 +31,7 @@
             width: 170px;
             height: 44px;
             background-color: #ffdf40;
+            border-radius: 20px;
             color: #fff;
         }
         .createaccount:hover{

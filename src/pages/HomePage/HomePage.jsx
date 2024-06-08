@@ -41,6 +41,14 @@ const HomePage = () => {
           </p>
         </div>
       </div>
+      <div className="youtube-box">
+        <iframe className="youtubevideo"
+          src="https://player.vimeo.com/video/955203673?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?controls=0&sidedock=0&title=0&autoplay=1&muted=1&loop=1"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+          title="milk_lab (1080p)"
+        ></iframe>
+      </div>
       <div className="home">
         <div className="home_top">
           <p>
@@ -105,6 +113,7 @@ const HomePage = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            borderRadius: "20px",
           }}
           type="primary"
           danger
@@ -115,14 +124,12 @@ const HomePage = () => {
 
       <div className="home_feedback">
         <div className="container_feedback">
-           <Row>
-              <Col span={2}>
-             
-              </Col>
-              <Col span={22}>
-              <h1 style={{padding: '20px 0'}}>Customer Feedback</h1>
-              </Col>
-           </Row>
+          <Row>
+            <Col span={2}></Col>
+            <Col span={22}>
+              <h1 style={{ padding: "20px 0" }}>Customer Feedback</h1>
+            </Col>
+          </Row>
           <Row>
             <Col span={2}></Col>
             <Col className="box" span={6}>

@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer_left">
         <h1>About us</h1>
         <img
-          src="https://logos-world.net/wp-content/uploads/2023/03/Cadburys-Dairy-Milk-Chocolat-Logo-1961.png"
+          src="https://i.pinimg.com/originals/e9/5b/5d/e95b5da57b8cd19bc932984bde39584b.png"
           width={200}
           alt="logo"
         ></img>

@@ -1,7 +1,40 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import * as UserService from "../../services/UserService";
+import { useMutationHooks } from "../../hooks/useMutationHook";
+import * as message from "../../components/Message/Message";
 const SignUpPage = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const handleNavigateLogin = () => {
+    navigate("/login");
+  };
+  const handleOnChangeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const mutation = useMutationHooks((data) => UserService.signupUser(data));
+  const { data, isSuccess, isError } = mutation;
+  const handleOnChangePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleOnChangeConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+  useEffect(() => {
+    if (isSuccess && data?.status !== "ERR") {
+      message.success();
+      handleNavigateLogin();
+    }
+  }, [isSuccess, isError]);
+  const handleSignUp = () => {
+    mutation.mutate({
+      email,
+      password,
+      confirmPassword,
+    });
+  };
   return (
     <div className="w-full h-screen flex items-start">
       <div className=" relative w-1/2 h-full flex flex-col">
@@ -36,16 +69,22 @@ const SignUpPage = () => {
 
           <div className="w-full flex flex-col">
             <input
+              value={email}
+              onChange={handleOnChangeEmail}
               type="email"
               placeholder="Email"
               className="w-full py-2 my-2 bg-transparent text-black  border-b border-black outline-none focus: outline-none"
             />
             <input
+              value={password}
+              onChange={handleOnChangePassword}
               type="password"
               placeholder="Password"
               className="w-full py-2 my-2 bg-transparent text-black  border-b border-black outline-none focus: outline-none"
             />
             <input
+              value={confirmPassword}
+              onChange={handleOnChangeConfirmPassword}
               type="confirmpassword"
               placeholder="ConfirmPassword"
               className="w-full py-2 my-2 bg-transparent text-black  border-b border-black outline-none focus: outline-none"
@@ -53,16 +92,25 @@ const SignUpPage = () => {
           </div>
           <div className="w-full flex items-center justify-between">
             <div className="w-full flex items-center">
-              <Link to={"/login"}>
-                {" "}
-                <p className="text-ms cursor-pointer underline underline-offset-2">
-                  Sign in
-                </p>
-              </Link>
+              <p
+                onClick={handleNavigateLogin}
+                className="text-ms cursor-pointer underline underline-offset-2"
+              >
+                Sign in
+              </p>
             </div>
           </div>
+          {data?.status === "ERR" && (
+            <span style={{ color: "red" }}>{data?.message}</span>
+          )}
           <div className="w-full flex flex-col my-4">
-            <button className="w-full text-white font-semibold my-2 bg-[#060606] rounded-md p-4 text-center flex items-center justify-center cursor-pointer ">
+            <button
+              disabled={
+                !email.length || !password.length || !confirmPassword.length
+              }
+              onClick={handleSignUp}
+              className="w-full text-white font-semibold my-2 bg-[#060606] rounded-md p-4 text-center flex items-center justify-center cursor-pointer "
+            >
               Register
             </button>
           </div>
