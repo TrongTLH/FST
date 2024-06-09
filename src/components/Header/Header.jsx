@@ -58,7 +58,7 @@ const Header = () => {
             <p
               style={{
                 color: "#ffffff",
-                fontSize: "15px",
+                fontSize: "13px",
                 fontWeight: "600",
                 display: "flex",
                 height: "44px",
@@ -81,7 +81,7 @@ const Header = () => {
             <p
               style={{
                 color: "#ffffff",
-                fontSize: "15px",
+                fontSize: "13px",
                 fontWeight: "600",
                 display: "flex",
                 height: "44px",
@@ -92,10 +92,10 @@ const Header = () => {
               1000+ Orders Shipped Worldwide
             </p>
           </Col>
-          <Col span={4}></Col>
+          <Col span={3}></Col>
           <Col
             style={{ display: "flex", gap: "8px", alignItems: "center" }}
-            span={4}
+            span={5}
           >
             <img
               style={{ width: "20px", height: "20px" }}
@@ -105,7 +105,7 @@ const Header = () => {
             <p
               style={{
                 color: "#ffffff",
-                fontSize: "15px",
+                fontSize: "13px",
                 fontWeight: "600",
                 display: "flex",
                 height: "44px",

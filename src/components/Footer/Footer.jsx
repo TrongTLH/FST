@@ -10,12 +10,13 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer_left">
-        <h1>About us</h1>
         <img
-          src="https://i.pinimg.com/originals/e9/5b/5d/e95b5da57b8cd19bc932984bde39584b.png"
-          width={200}
+          src="https://organicformulashop.com/cdn/shop/files/VECTORSTOCK-PROJECT-909-PINK-BACKGROUND_360x.png?v=1623904518"
+          width={190}
           alt="logo"
         ></img>
+        <h1>About us</h1>
+
         <p style={{ fontSize: 13 }}>
           Providing quality milk, mother and baby products from leading brands.
         </p>
