@@ -14,13 +14,6 @@ const HomePage = () => {
         <div className="container">
           <h1>Top VietNam Brands, Great Prices, High Quality</h1>
           <p>
-            <strong>We are VietName based</strong>. With more than 25 years
-            experience in wholesale on Baby Products, we fully understand
-            supplying the best quality products and great customer service are
-            the keys to long lasting relationships and look forward to serving
-            you soon.
-          </p>
-          <p>
             <strong>Here at Milk Baby Shop we value every customer</strong>,
             individual or business, and our dedicated team are always keen to
             help your individual needs. Thanks to our long-term close
@@ -41,16 +34,32 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <div className="youtube-box">
-        <iframe
-          className="youtubevideo"
-          src="https://player.vimeo.com/video/955203673?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?controls=0&sidedock=0&title=0&autoplay=1&muted=1&loop=1"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-          title="milk_lab (1080p)"
-        ></iframe>
-      </div>
+
+      <Row className="youtube-box">
+        <Col span={3}></Col>
+        <Col span={9}> <p style={{padding: '0 20px', fontSize: '16px'}}>
+            <strong>We are VietName based</strong>. With more than 25 years
+            experience in wholesale on Baby Products, we fully understand
+            supplying the best quality products and great customer service are
+            the keys to long lasting relationships and look forward to serving
+            you soon.
+          </p></Col>
+        <Col span={9}>
+          <iframe
+            className="youtubevideo"
+            src="https://player.vimeo.com/video/955203673?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?controls=0&sidedock=0&title=0&autoplay=1&muted=1&loop=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            title="milk_lab (1080p)"
+          ></iframe>
+        </Col>
+        <Col span={3}></Col>
+      </Row>
+    
       <div className="home">
+      <div className="subcarousel">
+          <SubCarousel />
+        </div>
         <div className="home_top">
           <p>
             Search Your One From{" "}
@@ -71,13 +80,11 @@ const HomePage = () => {
         <div className="slogan">
           <p>We have the largest collection of products</p>
         </div>
-        <div className="subcarousel">
-          <SubCarousel />
-        </div>
         <div className="product_home">
           <p>Choose any products</p>
           <h1>Buy Everything With Us</h1>
         </div>
+    
         <div className="product_list">
           <p
             style={{

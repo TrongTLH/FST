@@ -1,14 +1,18 @@
+.top_header{
+    p{
+       font-family: 'Open Sans', sans-serif;
+    }
+}
 .header{
     display: flex;
     justify-content: space-between;
-    padding: 5px 130px;  
+    padding: 15px 130px;  
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 10;
-    backdrop-filter: blur(3.6px);
+    // position: fixed;
+    // top: 0;
+    // right: 0;
+    // left: 0;
+    // z-index: 10;
     
     &_nav{
         display: flex;
@@ -30,9 +34,8 @@
             justify-content: center;
             width: 170px;
             height: 44px;
-            background-color: #ffdf40;
+            background-color: #97A982 ;
             border-radius: 20px;
-            color: #fff;
         }
         .createaccount:hover{
             transform:  scale(1.05);

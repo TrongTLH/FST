@@ -10,6 +10,7 @@ import "./index.scss";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function Carousel() {
   return (
@@ -17,13 +18,46 @@ export default function Carousel() {
       <Swiper
         spaceBetween={10}
         autoplay={{
-          delay: 2400,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         pagination={true}
-        modules={[Pagination, Autoplay]}
+        modules={[Pagination]}
         className="carousel"
       >
+        <SwiperSlide>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "start",
+              flexDirection: "column",
+              position: "absolute",
+              zIndex: "10000000",
+              fontSize: "47px",
+              fontWeight: "330",
+              marginTop: "190px",
+              marginLeft: "150px",
+              color: "#555555",
+            }}
+          >
+            <h1>Organic VN Formulas for a</h1>
+            <h2>Healthy Start in Life</h2>
+            <p style={{ fontSize: "20px" }}>Bringing Happiness to Every Crib</p>
+            <p style={{ fontSize: "20px" }}>Embrace the Joy of Babyhood</p>
+            <p style={{ fontSize: "20px" }}>Where Cuteness Overflows</p>
+            <div style={{width: '360px', height: '60px', background: '#97A982', display: 'flex', marginTop: '25px', borderRadius: '12px', alignItems: 'center', justifyContent: 'center'}}>
+            <h3 style={{color: '#ffff', fontSize: '23px', fontWeight: '600'}}>
+              Shop Your Milk Below
+            </h3>
+            </div>
+          </div>
+          <img
+            // className="blur"
+            style={{ position: "relative" }}
+            src="https://organicformulashop.com/cdn/shop/files/baby-with-bottle-homepage-header_2450x.jpg?v=1623919002"
+            alt="img"
+          ></img>
+        </SwiperSlide>
         <SwiperSlide>
           <div
             style={{
@@ -45,13 +79,13 @@ export default function Carousel() {
             <p style={{ fontSize: "20px" }}>Where Cuteness Overflows</p>
           </div>
           <img
-            className="blur"
+            // className="blur"
             style={{ position: "relative" }}
             src="https://www.babybio.fr/img/modules/oh_news/news/51_picture.jpg"
             alt="img"
           ></img>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div
             style={{
               display: "flex",
@@ -77,34 +111,7 @@ export default function Carousel() {
             src="https://www.mcclatchy-partners.com/incoming/fevxr3/picture277285963/alternates/LANDSCAPE_1140/Best%20Baby%20Formulas%20lede%20(1).jpg"
             alt="img"
           ></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "end",
-              flexDirection: "column",
-              position: "absolute",
-              zIndex: "10000000",
-              fontSize: "47px",
-              fontWeight: "330",
-              marginTop: "190px",
-              marginLeft: "750px",
-              color: "#555555",
-            }}
-          >
-            <h1>Happy Everyday</h1>
-            <p style={{ fontSize: "20px" }}>Bringing Happiness to Every Crib</p>
-            <p style={{ fontSize: "20px" }}>Embrace the Joy of Babyhood</p>
-            <p style={{ fontSize: "20px" }}>Where Cuteness Overflows</p>
-          </div>
-          <img
-            className="blur"
-            style={{ position: "relative" }}
-            src="https://emh5334n65w.exactdn.com/wp-content/uploads/2020/08/switch.png?strip=all&lossy=1&ssl=1"
-            alt="img"
-          ></img>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );
