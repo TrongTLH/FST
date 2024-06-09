@@ -42,7 +42,8 @@ const HomePage = () => {
         </div>
       </div>
       <div className="youtube-box">
-        <iframe className="youtubevideo"
+        <iframe
+          className="youtubevideo"
           src="https://player.vimeo.com/video/955203673?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479?controls=0&sidedock=0&title=0&autoplay=1&muted=1&loop=1"
           frameborder="0"
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
