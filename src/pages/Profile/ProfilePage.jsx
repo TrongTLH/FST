@@ -74,7 +74,7 @@ const ProfilePage = () => {
     <div className="user-information">
       <img
         className="blur"
-        src="https://s3-alpha.figma.com/hub/file/1118353069/52db9eab-38dc-4464-a7a0-15fa8adba748-cover.png"
+        src="https://www.babybio.fr/img/modules/oh_news/news/51_picture.jpg"
         alt="img"
       ></img>
       <div className="container">
@@ -214,10 +214,11 @@ const ProfilePage = () => {
             <img
               src={avatar}
               style={{
-                height: "90px",
-                width: "150px",
-                borderRadius: "15px",
+                height: "100px",
+                width: "100px",
+                borderRadius: "50%",
                 objectFit: "cover",
+                
               }}
               alt="avatar"
             ></img>

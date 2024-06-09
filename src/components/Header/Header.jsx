@@ -58,7 +58,7 @@ const Header = () => {
             <p
               style={{
                 color: "#ffffff",
-                fontSize: "13px",
+                fontSize: "15px",
                 fontWeight: "600",
                 display: "flex",
                 height: "44px",
@@ -69,8 +69,7 @@ const Header = () => {
               Dedicated Customer Support
             </p>
           </Col>
-          <Col span={2}>
-          </Col>
+          <Col span={2}></Col>
           <Col style={{ display: "flex", gap: "8px" }} span={6}>
             <img
               src="https://static.thenounproject.com/png/194111-200.png"
@@ -81,7 +80,7 @@ const Header = () => {
             <p
               style={{
                 color: "#ffffff",
-                fontSize: "13px",
+                fontSize: "15px",
                 fontWeight: "600",
                 display: "flex",
                 height: "44px",
@@ -105,7 +104,7 @@ const Header = () => {
             <p
               style={{
                 color: "#ffffff",
-                fontSize: "13px",
+                fontSize: "15px",
                 fontWeight: "600",
                 display: "flex",
                 height: "44px",
@@ -174,7 +173,7 @@ const Header = () => {
           )}
 
           <li style={{ fontSize: "16px", display: "flex", gap: "5px" }}>
-            <Badge count={1} size="small">
+            <Badge style={{ background: "#97A982" }} count={1} size="small">
               {" "}
               <ShoppingCartOutlined
                 style={{ cursor: "pointer", fontSize: "20px" }}

@@ -15,48 +15,49 @@ export default function SubCarousel({ numberOfSlice }) {
   return (
     <>
       <Swiper
+        spaceBetween={30}
         autoplay={{
           delay: 1500,
           disableOnInteraction: false,
         }}
-        slidesPerView={4}
+        slidesPerView={3}
         pagination={true}
         modules={[Pagination, Autoplay]}
         className="subcarousel"
       >
         <SwiperSlide>
           <img
-            src="https://media.bibomart.net/images/2024/2/2/1/origin/sua-aptamil-profutura-uc-so-3-900gr-new-1y.jpg"
+            style={{ borderRadius: "50px" }}
+            src="https://www.hipp.co.uk/fileadmin/_processed_/0/0/csm_202_-_Experts_e14194088d.jpg"
             alt="img"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://britishbabyshop.com/cdn/shop/files/Kendamil-Goat-stage1-First-Infant-milk-formula-620x620_360x.png?v=1692384009"
+            style={{ borderRadius: "50px" }}
+            src="https://www.hipp.co.uk/fileadmin/_processed_/9/0/csm_202_-_Competitions_44ba52606f.jpg"
             alt="img"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://britishbabyshop.com/cdn/shop/products/Kendamil-berry-porridge-600x600_360x.png?v=1664919947"
+            style={{ borderRadius: "50px" }}
+            src="https://www.hipp.co.uk/fileadmin/_processed_/d/d/csm_198-Discount_fae21b934d.jpg"
             alt="img"
           ></img>
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://britishbabyshop.com/cdn/shop/files/Kendamil-Classic-Stage3-Toddler-milk-615x_360x.png?v=1688538232"
+            style={{ borderRadius: "50px" }}
+            src="https://www.hipp.co.uk/fileadmin/_processed_/e/d/csm_198-Review_ce0ab76880.jpg"
             alt="img"
           ></img>
         </SwiperSlide>
+
         <SwiperSlide>
           <img
-            src="https://britishbabyshop.com/cdn/shop/products/Kendamil-creamy-porridge-600x600_360x.png?v=1664920203"
-            alt="img"
-          ></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://britishbabyshop.com/cdn/shop/products/Kendamil-cauliflower-broccoli-tomato-bake-600x600_360x.png?v=1664920050"
+            style={{ borderRadius: "50px" }}
+            src="https://www.hipp.co.uk/fileadmin/_processed_/8/3/csm_198-Guides_affd9ee059.jpg"
             alt="img"
           ></img>
         </SwiperSlide>

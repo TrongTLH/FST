@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <>
       <Carousel />
-      <div className="content">
+      <div style={{marginTop: '50px'}} className="content">
         <div className="container">
           <h1>Top VietNam Brands, Great Prices, High Quality</h1>
           <p>
@@ -80,7 +80,7 @@ const HomePage = () => {
         <div className="slogan">
           <p>We have the largest collection of products</p>
         </div>
-        <div className="product_home">
+        <div style={{marginTop: '-10px'}} className="product_home">
           <p>Choose any products</p>
           <h1>Buy Everything With Us</h1>
         </div>
