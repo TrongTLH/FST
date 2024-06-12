@@ -5,12 +5,25 @@ import Item from "../../components/Item/Item";
 import { Button, Col, Row } from "antd";
 import Carousel from "../../components/Carousel/Carousel";
 import SubCarousel from "../../components/SubCarousel/SubCarousel";
-
+import * as ProductService from "../../services/ProductService";
+import { useQuery } from "@tanstack/react-query";
 const HomePage = () => {
+  const fetchProductAll = async () => {
+    const res = await ProductService.getAllProduct();
+    console.log("res", res);
+    return res;
+  };
+  const { data: products } = useQuery({
+    queryKey: "products",
+    queryFn: fetchProductAll,
+    retry: 3,
+    retryDelay: 3000,
+  });
+  console.log("data", products);
   return (
     <>
       <Carousel />
-      <div style={{marginTop: '50px'}} className="content">
+      <div style={{ marginTop: "50px" }} className="content">
         <div className="container">
           <h1>Top VietNam Brands, Great Prices, High Quality</h1>
           <p>
@@ -37,13 +50,16 @@ const HomePage = () => {
 
       <Row className="youtube-box">
         <Col span={3}></Col>
-        <Col span={9}> <p style={{padding: '0 20px', fontSize: '16px'}}>
+        <Col span={9}>
+          {" "}
+          <p style={{ padding: "0 20px", fontSize: "16px" }}>
             <strong>We are VietName based</strong>. With more than 25 years
             experience in wholesale on Baby Products, we fully understand
             supplying the best quality products and great customer service are
             the keys to long lasting relationships and look forward to serving
             you soon.
-          </p></Col>
+          </p>
+        </Col>
         <Col span={9}>
           <iframe
             className="youtubevideo"
@@ -55,9 +71,9 @@ const HomePage = () => {
         </Col>
         <Col span={3}></Col>
       </Row>
-    
+
       <div className="home">
-      <div className="subcarousel">
+        <div className="subcarousel">
           <SubCarousel />
         </div>
         <div className="home_top">
@@ -80,11 +96,11 @@ const HomePage = () => {
         <div className="slogan">
           <p>We have the largest collection of products</p>
         </div>
-        <div style={{marginTop: '-10px'}} className="product_home">
+        <div style={{ marginTop: "-10px" }} className="product_home">
           <p>Choose any products</p>
           <h1>Buy Everything With Us</h1>
         </div>
-    
+
         <div className="product_list">
           <p
             style={{
@@ -96,22 +112,22 @@ const HomePage = () => {
             Featured Products
           </p>
           <div className="carousel_product">
-            <Item />
-          </div>
-          <p
-            style={{
-              fontSize: "23px",
-              fontWeight: 400,
-              color: "rgba(18, 18, 18, 0.7490196078)",
-            }}
-          >
-            Popular Products
-          </p>
-          <div className="carousel_product">
-            <Item />
-          </div>
-          <div className="carousel_product">
-            <Item />
+            {products?.data?.map((product) => {
+              return (
+                <Item
+                  key={product._id}
+                  countInStock={product.countInStock}
+                  description={product.description}
+                  image={product.image}
+                  name={product.name}
+                  price={product.price}
+                  rating={product.rating}
+                  type={product.type}
+                  selled={product.selled}
+                  discount={product.discount}
+                />
+              );
+            })}
           </div>
         </div>
         <Button
