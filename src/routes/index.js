@@ -7,6 +7,7 @@ import SubCarousel from "../components/SubCarousel/SubCarousel";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import SignUpPage from "../pages/SignupPage/SignupPape";
 import ProfilePage from "../pages/Profile/ProfilePage";
+import AdminPage from "../pages/AdminPage";
 export const routes = [
   {
     path: "/",
@@ -25,7 +26,7 @@ export const routes = [
     isShowHeader: true,
   },
   {
-    path: "/productdetail",
+    path: "/productdetail/:id",
     page: ProductDetail,
     isShowHeader: true,
   },
@@ -55,6 +56,11 @@ export const routes = [
     page: ProfilePage,
     isShowHeader: true,
   },
- 
+  {
+    path: "/system/admin",
+    page: AdminPage,
+    isShowHeader: false,
+    isPrivate: true
+  },
 
 ];

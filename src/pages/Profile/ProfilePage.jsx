@@ -218,7 +218,6 @@ const ProfilePage = () => {
                 width: "100px",
                 borderRadius: "50%",
                 objectFit: "cover",
-                
               }}
               alt="avatar"
             ></img>

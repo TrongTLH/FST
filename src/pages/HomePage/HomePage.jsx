@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./HomePage.scss";
 import { SearchOutlined } from "@ant-design/icons";
 import Item from "../../components/Item/Item";
@@ -7,19 +7,40 @@ import Carousel from "../../components/Carousel/Carousel";
 import SubCarousel from "../../components/SubCarousel/SubCarousel";
 import * as ProductService from "../../services/ProductService";
 import { useQuery } from "@tanstack/react-query";
+import { useDispatch, useSelector } from "react-redux";
+import { searchProduct } from "../../redux/slides/productSlide";
+import { useDebounce } from "../../hooks/useDebounce";
 const HomePage = () => {
-  const fetchProductAll = async () => {
-    const res = await ProductService.getAllProduct();
-    console.log("res", res);
+  const [limit, setLimit] = useState(6);
+  const searchProducts = useSelector((state) => state?.product?.search);
+  const searchDebounce = useDebounce(searchProducts, 1000);
+
+  const dispatch = useDispatch();
+
+  const fetchProductAll = async (context) => {
+    console.log("context", context);
+
+    const limit = context?.queryKey && context?.queryKey[1];
+    const search = context?.queryKey && context?.queryKey[2];
+    const res = await ProductService.getAllProduct(search, limit);
+
     return res;
   };
-  const { data: products } = useQuery({
-    queryKey: "products",
+
+  const { data: products, isPlaceholderData } = useQuery({
+    queryKey: ["products", limit, searchDebounce],
     queryFn: fetchProductAll,
     retry: 3,
-    retryDelay: 3000,
+    retryDelay: 1000,
+    placeholderData: (prev) => prev,
   });
-  console.log("data", products);
+
+  const [search, setSearch] = useState("");
+
+  const onSearch = (e) => {
+    setSearch(e.target.value);
+    dispatch(searchProduct(e.target.value));
+  };
   return (
     <>
       <Carousel />
@@ -76,6 +97,14 @@ const HomePage = () => {
         <div className="subcarousel">
           <SubCarousel />
         </div>
+
+        <div className="slogan">
+          <p>We have the largest collection of products</p>
+        </div>
+        <div style={{ marginTop: "-10px" }} className="product_home">
+          <p>Choose any products</p>
+          <h1>Buy Everything With Us</h1>
+        </div>
         <div className="home_top">
           <p>
             Search Your One From{" "}
@@ -86,21 +115,16 @@ const HomePage = () => {
           </p>
           <span> Products</span>
         </div>
-
         <div className="home_search">
-          <input type="text" placeholder="Search your product..."></input>
+          <input
+            type="text"
+            placeholder="Search your product..."
+            onChange={onSearch}
+          ></input>
           <span>
             <SearchOutlined className="icon" />
           </span>
         </div>
-        <div className="slogan">
-          <p>We have the largest collection of products</p>
-        </div>
-        <div style={{ marginTop: "-10px" }} className="product_home">
-          <p>Choose any products</p>
-          <h1>Buy Everything With Us</h1>
-        </div>
-
         <div className="product_list">
           <p
             style={{
@@ -109,28 +133,37 @@ const HomePage = () => {
               color: "rgba(18, 18, 18, 0.7490196078)",
             }}
           >
-            Featured Products
+            List Of Products
           </p>
-          <div className="carousel_product">
-            {products?.data?.map((product) => {
-              return (
-                <Item
-                  key={product._id}
-                  countInStock={product.countInStock}
-                  description={product.description}
-                  image={product.image}
-                  name={product.name}
-                  price={product.price}
-                  rating={product.rating}
-                  type={product.type}
-                  selled={product.selled}
-                  discount={product.discount}
-                />
-              );
-            })}
+
+          <div className="main">
+            <div className="carousel_product">
+              {products?.data?.map((product) => {
+                return (
+                  <Item
+                    key={product._id}
+                    countInStock={product.countInStock}
+                    description={product.description}
+                    image={product.image}
+                    name={product.name}
+                    price={product.price}
+                    rating={product.rating}
+                    type={product.type}
+                    selled={product.selled}
+                    discount={product.discount}
+                    id={product._id}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
         <Button
+          disabled={
+            products?.total === products?.data?.length ||
+            products.totalPage === 1
+          }
+          onClick={() => setLimit((prev) => prev + 6)}
           style={{
             fontSize: "17px",
             padding: "20px 50px",
