@@ -39,14 +39,17 @@
             color: #ffdf40;
          }
      }
-     .subcarousel{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width:  87%;
-        height: 300px;
-     }
+  
+        .subcarousel{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:  87%;
+            height: 300px;
+         }
+    
      .home_search{
+
         border-radius: 70px;
         width: 800px;
         display: flex;
@@ -84,12 +87,23 @@
             font-family: 700;
         }
      }
-     .carousel_product{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-     }
+        .main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            .carousel_product{
+                gap: 25px;
+                width:  950px;
+                display: flex;
+                 flex-wrap: wrap;
+                 justify-content: start;
+                
+            }
+        }
+      
+     
      .product_list{
          display: flex;
          flex-direction: column;

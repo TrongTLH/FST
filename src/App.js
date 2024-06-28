@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { routes } from "./routes";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import DefaultPage from "./components/Default/DefaultPage";
@@ -7,10 +7,11 @@ import { useQuery } from "@tanstack/react-query";
 import { isJsonString } from "./utils";
 import { jwtDecode } from "jwt-decode";
 import * as UserService from "./services/UserService";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "./redux/slides/userSlide";
 const App = () => {
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
   useEffect(() => {
     const { storageData, decoded } = handleDecoded();
     if (decoded?.id) {
@@ -52,10 +53,12 @@ const App = () => {
         <Routes>
           {routes.map((item) => {
             const Page = item.page;
+            const isCheckAuth = !item.isPrivate || user.isAdmin;
             const Layout = item.isShowHeader ? DefaultPage : Fragment;
             return (
               <Route
-                path={item.path}
+                key={item.path}
+                path={isCheckAuth ? item.path : undefined}
                 element={
                   <Layout>
                     <Page />

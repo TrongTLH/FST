@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as UserService from "../../services/UserService";
 import { resetUser } from "../../redux/slides/userSlide";
 
-const Header = () => {
+const Header = ({ isHiddenSearch = false, isHiddenCart = false }) => {
   const [userName, setUserName] = useState("");
   const [userAvatar, setUserAvatar] = useState("");
   const navigate = useNavigate();
@@ -21,17 +21,30 @@ const Header = () => {
   };
   const user = useSelector((state) => state.user);
   const content = (
-    <div>
-      <p className="props" style={{ cursor: "pointer" }} onClick={handleLogout}>
+    <div style={{ display: "flex", flexDirection: "column", gap: "7px" }}>
+      <p
+        className="props"
+        style={{ cursor: "pointer", fontSize: "16px" }}
+        onClick={handleLogout}
+      >
         Logout
       </p>
       <p
         className="props"
         onClick={() => navigate("/profile")}
-        style={{ cursor: "pointer" }}
+        style={{ cursor: "pointer", fontSize: "16px", padding: "5px 0" }}
       >
         User information
       </p>
+      {user?.isAdmin && (
+        <p
+          className="props"
+          onClick={() => navigate("/system/admin")}
+          style={{ cursor: "pointer", fontSize: "16px" }}
+        >
+          System Management
+        </p>
+      )}
     </div>
   );
   useEffect(() => {
@@ -143,6 +156,7 @@ const Header = () => {
               </Link>
             </li>
           </div>
+
           {userAvatar ? (
             <img
               style={{
@@ -171,15 +185,16 @@ const Header = () => {
               <Link>Sign in</Link>
             </li>
           )}
-
-          <li style={{ fontSize: "16px", display: "flex", gap: "5px" }}>
-            <Badge style={{ background: "#97A982" }} count={1} size="small">
-              {" "}
-              <ShoppingCartOutlined
-                style={{ cursor: "pointer", fontSize: "20px" }}
-              />
-            </Badge>
-          </li>
+          {!isHiddenCart && (
+            <li style={{ fontSize: "16px", display: "flex", gap: "5px" }}>
+              <Badge style={{ background: "#97A982" }} count={1} size="small">
+                {" "}
+                <ShoppingCartOutlined
+                  style={{ cursor: "pointer", fontSize: "20px" }}
+                />
+              </Badge>
+            </li>
+          )}
         </nav>
       </div>
     </>
